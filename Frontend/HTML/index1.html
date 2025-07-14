@@ -52,11 +52,27 @@
             </optgroup>
         </select>
         <br><br>
+    
+        <!-- 자기소개 -->
+        <label for="bio">자기소개:</label>
+        <textarea id="bio" name="bio" rows="5" cols="50" placeholder="자기소개를 입력하세요.">
+        </textarea>
         <br><br>
 
+        <!-- 파일 업로드 -->
+        <label for="profilePic">프로필 사진 업로드:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+        <br><br>
 
-    </form>
+        <!-- 작업 진행 상황 -->
+        <label for="uploadProgress">업로드 진행 상황:</label>
+        <progress id="uploadProgress" value="70" max="100"></progress>70%
+        <br><br>
 
-    
+        <!-- 양식 제출 -->
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+
+    </form>    
 </body>
 </html>
