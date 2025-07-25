@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery click $ dblclick 예제</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #myPara{
+            font-size: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p id="myPara">더블클릭하거나 클릭해보세요</p>
+
+    <script>
+     $(document).ready(function(){
+        
+        // 클릭시 글자색 파란색 변경
+        $("#myPara").click(function(){
+            $("#myPara").css("color", "blue");
+        });
+
+        // 더블클릭시 글자색 빨간색 변경
+        $("#myPara").dblclick(function(){
+            $("#myPara").css("color", "red");
+        });    
+     });
+
+    </script>
+</body>
+</html>

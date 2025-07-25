@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery todo list 예제</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        li{
+            cursor: pointer;
+        }
+        li:hover{
+            text-decoration: line-through;
+            color: slategray;
+        }
+    </style>
+</head>
+<body>
+    <input id="todoInput" placeholder="할 일을 입력하세요." />
+    <button id="addBtn">추가</button>
+    <ul id="todoList">
+    </ul>
+
+    <script>
+        $(function(){
+            // 버튼 입력시 추가
+            $("#addBtn").on("click", function(){
+                const todo = $("#todoInput").val().trim();
+            
+            // 공백제거
+            if(todo === "") {
+                alert("내용을 입력하세요.");
+                return;
+            }
+
+            // li 생성 및 리스트 추가
+            const $li = $("<li>").text(todo);
+            $("#todoList").append($li);
+
+            // 추가 후 입력창 초기화
+            $("#todoInput").val("");
+            });
+
+            // 추가한 항목 클릭 시 삭제
+            $("#todoList").on("click", "li", function(){
+                $(this).remove();
+            });           
+        });
+    </script>
+    
+</body>
+</html>

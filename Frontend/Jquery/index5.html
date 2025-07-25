@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery fadeToggle 예제</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+     <style>
+    #fadeBtn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    
+    /* 버튼 아래로 이미지 넣기 */
+    #myImg {
+      display: block;
+      margin-top: 100px; 
+    }
+    </style>
+</head>
+<body>
+    
+    <button id="fadeBtn">버튼</button>
+    <img id="myImg" src="https://miro.medium.com/v2/resize:fit:860/0*eFomJUFua8tuqe8g.png" alt="image" />
+    
+    <script>
+        $(function(){
+            $("#fadeBtn").on("click", function(){
+                // 0.7초 동안 이미지 서서히 사라지기
+                $("#myImg"). fadeToggle(700);
+            });
+        })
+    </script>
+    
+    
+</body>
+</html>
