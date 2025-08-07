@@ -1,4 +1,477 @@
-*{
-    margin: 0; padding: 0; box-sizing: border-box;
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  background-color: black;
 }
-/* wrapper */
+
+/* 기존 Bootstrap 스타일 무시하고 고정값 지정 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.wrap-center {
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+}
+
+.info-box {
+  padding: 12px 16px;
+  border-radius: 600px;
+}
+
+.info-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-message {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.login-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.icon-bookmark {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .icon-bookmark {
+    font-size: 36px;
+  }
+}
+
+/* bottom fixted nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0px 0px 0px;
+  background: #1b1b1b;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  z-index: 9999;
+}
+
+.bottom-nav .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  color: #ffffff;
+}
+
+.nav-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* main */
+.main {
+  /* 하단 네비게이션 가림 방지 */
+  padding-bottom: 80px;
+}
+
+.section-title {
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  padding: 0 16px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .scection-title {
+    max-width: 720px; /*테블릿*/
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .section-title {
+    max-width: 1140px; /*데스크탑*/
+    font-size: 24px;
+  }
+}
+
+/* button-content */
+
+.content-btn.wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px 0;
+}
+
+.cont-btn {
+  color: black;
+  padding: 0 8px;
+  border-radius: 50px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 60px;
+  min-width: 80px;
+  gap: 10px;
+}
+
+/* 각 버튼 색상 지정 */
+.cont-btn1 {
+  background-color: #ff6431;
+}
+
+.cont-btn2 {
+  background-color: #fe53a2;
+}
+
+.cont-btn3 {
+  background-color: #eaa000;
+}
+
+.cont-btn4 {
+  background-color: #2679fb;
+}
+
+.cont-btn5 {
+  background-color: #a85fda;
+}
+
+.cont-btn6 {
+  background-color: #a0b90b;
+}
+
+/* 버튼 내 이미지 스타일 */
+.cont-btn img.btn-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cont-btn .btn-text {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* hot-content */
+.hot-section {
+  color: white;
+  padding: 40px 20px;
+}
+
+/* 전체 hot section 영역 */
+.card-hot-list {
+  display: grid;
+  /* 2열 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* hot section 개별 */
+.card-hot-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  border-radius: 16px;
+  padding: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  height: 168px;
+  box-sizing: border-box;
+}
+
+.card-hot-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0px 12px 12px;
+}
+
+.card-hot-item h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.card-hot-item p {
+  font-size: 14px;
+  color: #ffffff99;
+  margin-bottom: 12px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.author span {
+  font-weight: bold;
+}
+
+.author h5 {
+  color: #ffffff99;
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.card-hotimg-wrapper {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-hotimg-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* hot content 반응형: 768px이하일 때 1열로 전환 */
+@media (max-width: 768px) {
+  .card-hot-list {
+    grid-template-columns: 1fr;
+  }
+
+  .card-hot-item {
+    max-width: 100%;
+  }
+}
+
+/* content */
+.card-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* question-section */
+
+.question-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 20px 0px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px auto;
+  max-width: 1000px;
+  padding: 0 16px;
+}
+
+.section-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.question-card {
+  background-color: #1b1b1b;
+  border-radius: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 32px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.author-image img {
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.author-info {
+  font-size: 14px;
+  color: white;
+}
+
+.author-info strong {
+  color: white;
+}
+
+.question-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ask-button {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ask-botton .arrow {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 토글 메인 카드 */
+.category {
+  background: #1b1b1b;
+  color: white;
+  border-radius: 12px;
+  margin: 16px 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+}
+
+/* 토클 메인 카드 제목 줄 */
+.categoty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 화살표 회전효과 */
+.arrow {
+  transition: transform 0.3 ease;
+}
+
+.category.collapsed .arrow {
+  transform: rotate(-90deg);
+}
+
+/* 카드 컨테이너 (펼치고/접는) 효과 */
+.card-container {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.category.collapsed .card-container {
+  max-height: 0;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #333;
+}
+
+.category-card img {
+  width: 142px;
+  height: 142px;
+  border-radius: 10px;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.card-text h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #333;
+}

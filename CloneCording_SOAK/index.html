@@ -1,62 +1,247 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CloneCording_SOAK/styles.css" type=" text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="../CloneCording_SOAK/styles.css"
+      type="text/css"
+    />
     <title>지금, 과학 쏙으로</title>
-    <link rel="icon" href="./image/favicon.ico" type="image/x-icon" sizes="16x16">
-</head>
-<body>
-    <header>
-        <div class="wrapper">
-            <!-- header의 왼쪽 섹션 -->
-            <div class="left-section">
-                <img class="logo" src="./image/logo-soak.webp" alt="soak logo">
-            </div>
-            <!-- header의 가운데 섹션 -->
-            <div class="middle-section">
-                <!-- 로그인 바 -->
-                <div class="login-wrapper">
-                     <!-- 이미지 -->
-                     <img class="image" src="" alt="">
-                     <!-- 로그인 버튼 -->
-                     <div class="login-button"></div>
-            </div>
-            <!-- header의 오른쪽 섹션 -->
-            <div class="right-section">
-                <img class="image" src="" alt="">    
-        </div>
-    </header>
+    <link
+      rel="icon"
+      href="./image/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <!-- Material Icons CDN 추가 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap-center">
 
-    <!-- fixed bottom nav -->
-    <nav class="nav">
-        <a class="nav-link" src="#">
-            <i class="meterial-icons">home</i>
-            <span class="nav-text">HOME</span>
-        </a>
-        <a class="nav-link" src="#">
-            <i class="meterial-icons">explore</i>
-            <span class="nav-text">EXPLORE</span>
-        </a>
-        <a class="nav-link" src="#">
-            <i class="meterial-icons">category</i>
-            <span class="nav-text">CATAGORY</span>
-        </a>
-        <a class="nav-link" src="#">
-            <i class="meterial-icons">my soak</i>
-            <span class="nav-text">MY SOAK</span>
-        </a>
-    </nav>
-    <main>
-        <div class="relative-slider-content">
-            <ul class="">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+      <!-- header -->
+      <header class="header">
+        <div class="header-wrapper">
+          <div class="logo">
+            <img src="./image/logo-soak.webp" alt="로고" class="logo" />
+          </div>
+          <div class="info-box">
+            <div class="info-message">
+              지금 로그인하고, 귀여운 배지와 과학 탐험을 시작하세요.
+              <button class="login-btn">로그인</button>
+            </div>
+          </div>
+          <div class="header-svg">
+            <span class="material-icons icon-bookmark">bookmark</span>
+          </div>
         </div>
-    </main>
-    <footer></footer>
-</body>
+      </header>
+
+      <!-- fixed bottom nav -->
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li>
+            <span class="material-icons" style="color: #ffffff">home</span
+            ><span>HOME</span>
+          </li>
+          <li>
+            <span class="material-icons" style="color: #ffffff">explore</span
+            ><span>EXPLORE</span>
+          </li>
+          <li>
+            <span class="material-icons" style="color: #ffffff">category</span
+            ><span>CATEGORY</span>
+          </li>
+          <li>
+            <span class="material-icons" style="color: #ffffff">person</span
+            ><span>MY SOAK</span>
+          </li>
+        </ul>
+      </nav>
+      
+      <main class="main">
+        <!-- card-slide-section -->
+        <section class="card-slide-section">
+         
+        </section>
+
+        <!-- button content -->
+        <section class="content-btn">
+          <div class="content-btn wrap">
+            <button class="cont-btn cont-btn1">
+              일반상대성이론</button>
+              <button class="cont-btn cont-btn2">
+              <img src="./image/button_bcs.webp" alt="BCS이론" class="btn-icon" />
+              <span class="btn-text">BCS이론</span>
+            </button>
+            <button class="cont-btn cont-btn3">
+              <img src="./image/button_반응성.webp" alt="반응성" class="btn-icon left" />
+              반응성</button>
+            <button class="cont-btn cont-btn4">해빙</button>
+            <button class="cont-btn cont-btn5">조석력</button>
+            <button class="cont-btn cont-btn6">
+              <img src="./image/button_암석권.webp" alt="암석권" class="btn-icon left" />
+              암석권</button>
+          </div>
+        </section>
+
+        <!-- hot content -->
+        <section class="hot-section">
+          <h2 class="section-title">지금 SOAK에서 가장 핫한 콘텐츠!</h2>
+          <div class="card-hot-list">
+            <!-- card1 -->
+            <div class="card-hot-item">
+              <div class="card-hot-content">
+                <div class="hot-content">
+                  <h3>모든 걸 빨아들이는 블랙홀은 왜 소멸할까?</h3>
+                  <p>에너지를 방출하며 작아지는 블랙홀</p>
+                </div>
+                <div class="author">
+                  <img src="./image/hot_author_blackhall.webp" alt="이형묵" />
+                  <span>이형묵</span>
+                  <h5>서울대학교 물리천문학부</h>
+                </div>
+              </div>
+              <div class="card-hotimg-wrapper">
+                <img src="./image/hot_black hall.webp" alt="블랙홀 이미지" />
+              </div>
+            </div>
+
+            <!-- card2 -->
+            <div class="card-hot-item">
+              <div class="card-hot-content">
+                <div class="hot-content">
+                  <h3>왜 우리는 아직 외계인을 만나지 못했을까?</h3>
+                  <p>페르미의 역설</p>
+                </div>
+                <div class="author">
+                  <img src="./image/hot_author_alien.webp" alt="이형묵" />
+                  <span>홍성옥</span>
+                  <h5>한국천문연구원</h>
+                </div>
+              </div>
+              <div class="card-hotimg-wrapper">
+                <img src="./image/hot_alien.webp" alt="외계인 이미지" />
+              </div>
+            </div>
+            
+
+            <!-- card3 -->
+            <div class="card-hot-item">
+              <div class="card-hot-content">
+                <div class="hot-content">
+                  <h3>전류는 어떻게 선풍기를 작동시킬까?</h3>
+                  <p>전기 모터 작동의 원동력, 로런츠 힘</p>
+                </div>
+                <div class="author">
+                  <img src="./image/hot_author_fan.webp" alt="이형묵" />
+                  <span>김갑진</span>
+                  <h5>한국과학기술원(KAIST)물리학과</h>
+                </div>
+              </div>
+              <div class="card-hotimg-wrapper">
+                <img src="./image/hot_fan.webp" alt="블랙홀 이미지" />
+              </div>
+            </div>
+
+            <!-- card4 -->
+            <div class="card-hot-item">
+              <div class="card-hot-content">
+                <div class="hot-content">
+                  <h3>정말 화석연료가 문제일까?</h3>
+                  <p>탄소 동위원소로 추적하는 이산화탄소 농도</p>
+                </div>
+                <div class="author">
+                  <img src="./image/hot_author_fossil fuel.webp" alt="이형묵" />
+                  <span>박선영</span>
+                  <h5>경북대학교 지구환경과학부</h>
+                </div>
+              </div>
+              <div class="card-hotimg-wrapper">
+                <img src="./image/hot_fossil fuel.webp" alt="블랙홀 이미지" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- question section -->
+        <section class="question-section">
+          <div class="section-header">
+            <h2 class="section-title">지금 가장 뜨거운 주제는?</h2>
+            <a href="#">콘텐츠 보러가기 &gt;</a>
+          </div>
+
+          <div class="question-card">
+            <div class="author-image">
+              <img src="./image/hottopick_author.webp" alt="이안나 교수" />
+            </div>
+
+            <div class="question-content">
+              <p calss="author-info">
+                <strong>이안나</strong> 전북대학교 화학과
+              </p>
+              <h3 class="question-text">
+                일산화탄소 중독 사고를 예방하기 위한 최선의 방법은 무엇일까?
+              </h3>
+              <button class="ask-button">
+                저자가 당신의 답을 기다리고 있어요!
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 토글 메인 카드 -->
+        <section class="main-togglecard">
+          <div class="category collapsed">
+            <div class="category-header" onclik="toggleCards(this)">
+              <span>화학, 작은 입자에 담긴 커다란 질서</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="card-container">
+              <div class="category-card">
+                <img src="" alt="image" />
+                <div class="card-text">
+                  <h3>원자는 어떻게 결합할까?</h3>
+                  <p>홍길동</p>
+                </div>
+              </div>
+              <div class="category-card">
+                <img src="" alt="image" />
+                <div class="card-text">
+                  <h3>원자는 어떻게 결합할까?</h3>
+                  <p>홍길동</p>
+                </div>
+              </div>
+              <div class="category-card">
+                <img src="" alt="image" />
+                <div class="card-text">
+                  <h3>원자는 어떻게 결합할까?</h3>
+                  <p>홍길동</p>
+                </div>
+              </div>
+              <div class="category-card">
+                <img src="" alt="image" />
+                <div class="card-text">
+                  <h3>원자는 어떻게 결합할까?</h3>
+                  <p>홍길동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                      
+      </main>
+
+
+      <footer></footer>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
 </html>
